@@ -1,14 +1,20 @@
 const githubQuery={
     query:`
     { 
-      viewer {
+      viewer { 
         name
-        repositories(first: 10, orderBy: {field: CREATED_AT, direction: DESC}) {
-          nodes {
-            name
-            description
-            id
-            url
+      }
+      search(query:"user:asitp9 sort:updated.desc", type:REPOSITORY, first:20){
+        nodes{
+          ... on Repository{
+                name
+                description
+                id
+                url
+                viewerSubscription
+                licenseInfo{
+                  spdxId
+                }
           }
         }
       }
