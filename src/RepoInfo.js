@@ -5,7 +5,7 @@ const RepoInfo=({repo, key})=>{
                      license=(                          
                                 <span
                                 className={
-                                    "px-1 py-0 ms-1 d-inline-block btn btn-sm btn-danger"
+                                    "px-1 py-0 mr-1 d-inline-block btn btn-sm btn-danger"
                                 }
                                 style={{fontSize:"0.6em"}}>NO LICENSE</span>
                             );
@@ -14,7 +14,7 @@ const RepoInfo=({repo, key})=>{
                     license=(                          
                         <span
                         className={
-                            "px-1 py-0 ms-1 d-inline-block btn btn-sm btn-warning"
+                            "px-1 py-0 mr-1 d-inline-block btn btn-sm btn-warning"
                         }
                         style={{fontSize:"0.6em"}}>{repo.licenseInfo.spdxId}</span>
                     );
@@ -22,7 +22,7 @@ const RepoInfo=({repo, key})=>{
         default:
             license=(
                 <span className={
-                            "px-1 py-0 ms-1 d-inline-block btn btn-sm btn-outline-success"
+                            "px-1 py-0 mr-1 d-inline-block btn btn-sm btn-outline-success"
                         }
                         style={{fontSize:"0.6em"}}>{repo.licenseInfo.spdxId}</span>
                     );
